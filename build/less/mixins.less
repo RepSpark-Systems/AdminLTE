@@ -125,13 +125,14 @@
   //User Panel (resides in the sidebar)
   .user-panel {
     > .info, > .info > a {
-      color: #fff;
+      color: @sidebar-dark-color;
     }
   }
   //Sidebar Menu. First level links
   .sidebar-menu > li {
     //Section Headning
     &.header {
+      font-weight: bold;
       color: lighten(@sidebar-dark-bg, 20%);
       background: darken(@sidebar-dark-bg, 4%);
     }
