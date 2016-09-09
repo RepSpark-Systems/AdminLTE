@@ -1,15 +1,26 @@
 // out: ../../../dist/css/repspark.auto.min.css, sourcemap: true
 .product-details-product-name {
   text-transform: uppercase;
+  color:#222;
 }
 
 .product-details-extended{
+    @media screen {
+      @media (min-width: 1200px){
   right: 0px;
   position: fixed;
+}
+}
   z-index: 1;
   background-color: rgba(255,255,255,.5);
   border-bottom-left-radius: .3em;
   border-top-left-radius: .3em;
   padding-bottom: 15px;
   padding-left: 25px;
+  font-size: .9em;
+  color: #777;
+}
+
+.product-details-price-discount{
+    font-size: .7em;
 }
