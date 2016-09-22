@@ -1,12 +1,78 @@
-.slides {
+.pin-button {
+  mask-image: url('img/add.svg');
+  -webkit-mask-image: url('img/add.svg');
+  width: 50px;
+  height: 50px;
+  bottom: 10px;
+  right: 10px;
+  position: absolute;
+  z-index: 9999;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: orange;
+}
+.unpin {
+  mask-image: url('img/minus.svg');
+  -webkit-mask-image: url('img/minus.svg');
+  background-color: red;
+}
+.product-inventory {
+  border: 1px solid #b1b1b1;
+  z-index: 9999;
+  left: 45px;
+  top: 40px;
+  position: relative;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  line-height: 1.1em;
+  color: black;
+  font-weight: 300;
+}
+.product-labels {
+  text-align: center;
+  margin-top: 5px;
+  display: block;
+  bottom: -100px;
+  position: absolute;
+  width: 100%;
+}
+.product-name {
+  display: block;
+  text-transform: uppercase;
+  padding-top: 10px;
+  padding-bottom: 4px;
+  font-weight: 400;
+  color: #666;
+}
+.product-season {
+  display: block;
+  padding-bottom: 5px;
+  font-weight: 400;
+  color: gray;
+  font-size: 13px;
+}
+.product-number {
+  display: block;
+  padding: 3px;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  color: gray;
+}
+.product-slides {
   padding: 0;
-  width: 400px;
-  height: 240px;
+  width: 300px;
+  height: 400px;
   display: block;
   margin: 0 auto;
   position: relative;
+  box-shadow: 1px 1px 6px 1px rgba(153, 153, 153, 0.1);
+  background-color: #F5F5F5;
 }
-.slides * {
+.product-slides * {
   user-select: none;
   -ms-user-select: none;
   -moz-user-select: none;
@@ -14,28 +80,25 @@
   -webkit-user-select: none;
   -webkit-touch-callout: none;
 }
-.slides input {
+.product-slides input {
   display: none;
 }
-.slide-container {
+.product-slide-container {
   display: block;
 }
-.slide {
-  top: 0;
+.product-slide {
   opacity: 0;
-  width: 400px;
-  height: 240px;
   display: block;
   position: absolute;
-  transform: scale(0.5);
-  transition: all 0.7s ease-in-out;
+  /*transform: scale(.8);*/
+  transition: all 0.8s ease-in-out;
 }
-.slide img {
+.product-slide img {
   width: 100%;
   height: 100%;
 }
-.slide-nav label {
-  width: 20px;
+.product-slides-nav label {
+  width: 10%;
   height: 100%;
   display: none;
   position: absolute;
@@ -46,36 +109,36 @@
   color: #FFF;
   font-size: 40pt;
   text-align: center;
-  line-height: 240px;
-  background-color: rgba(255, 255, 255, 0.3);
+  line-height: 400px;
+  background-color: rgba(0, 0, 0, 0.1);
   text-shadow: 0px 0px 15px #777777;
 }
-.slide:hover + .slide-nav label {
+.product-slide:hover + .product-slides-nav label {
   opacity: 0.5;
 }
-.slide-nav label:hover {
+.product-slides-nav label:hover {
   opacity: 1;
 }
-.slide-nav .next {
+.product-slides-nav .product-slides-next {
   right: 0;
 }
-input:checked + .slide-container .slide {
+input:checked + .product-slide-container .product-slide {
   opacity: 1;
   transform: scale(1);
   transition: opacity 0.5s ease-in-out;
 }
-input:checked + .slide-container .slide-nav label {
+input:checked + .product-slide-container .product-slides-nav label {
   display: block;
 }
-.nav-dots {
+.product-slides-nav-dots {
   width: 100%;
-  bottom: 9px;
+  bottom: -25px;
   height: 11px;
   display: block;
   position: absolute;
   text-align: center;
 }
-.nav-dots .nav-dot {
+.product-slides-nav-dots .product-slides-nav-dot {
   top: -5px;
   width: 6px;
   height: 6px;
@@ -85,12 +148,12 @@ input:checked + .slide-container .slide-nav label {
   display: inline-block;
   background-color: rgba(0, 0, 0, 0.3);
 }
-.nav-dots .nav-dot:hover {
+.product-slides-nav-dots .product-slides-nav-dot:hover {
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.8);
 }
-input#img-1:checked ~ .nav-dots label#img-dot-1,
-input#img-2:checked ~ .nav-dots label#img-dot-2,
-input#img-3:checked ~ .nav-dots label#img-dot-3 {
+input#img-1:checked ~ .product-slides-nav-dots label#img-dot-1,
+input#img-2:checked ~ .product-slides-nav-dots label#img-dot-2,
+input#img-3:checked ~ .product-slides-nav-dots label#img-dot-3 {
   background: rgba(0, 0, 0, 0.8);
 }

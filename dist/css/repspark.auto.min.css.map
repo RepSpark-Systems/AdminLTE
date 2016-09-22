@@ -1,1 +1,1 @@
-{"version":3,"sources":["product-details.less"],"names":[],"mappings":"AAAA;EACE,yBAAA;;AAGF;EACE,UAAA;EACA,eAAA;EACA,UAAA;EACA,0CAAA;EACA,+BAAA;EACA,4BAAA;EACA,oBAAA;EACA,kBAAA"}
+{"version":3,"sources":["product-details.less"],"names":[],"mappings":"AAAA;EACE,yBAAA;EACA,WAAA;;AAGF;EAOE,UAAA;EACA,0CAAA;EACA,+BAAA;EACA,4BAAA;EACA,oBAAA;EACA,kBAAA;EACA,eAAA;EACA,WAAA;;AAZI,mBAA0B;EAiB/B;IAhBC,UAAA;IACA,eAAA;;;AAaF;EACI,eAAA"}
