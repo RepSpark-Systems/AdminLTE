@@ -187,6 +187,22 @@ a:focus {
   display: block;
   margin-top: 5px;
 }
+.content-wrapper.full-details {
+  margin-left: 0px;
+}
+.main-footer.full-details {
+  margin-left: 0px;
+}
+.command-center.full-details {
+  top: -100px;
+  position: absolute;
+  margin-left: 0px;
+}
+.command-center-collapsed.full-details {
+  top: -100px;
+  position: absolute;
+  margin-left: 0px;
+}
 /*
  * Component: Main Header
  * ----------------------
@@ -410,6 +426,11 @@ a:focus {
     right: 40px;
   }
 }
+.main-header.full-details {
+  height: 0px;
+  top: -100px;
+  position: absolute;
+}
 /*
  * Component: Sidebar
  * ------------------
@@ -582,6 +603,9 @@ a:focus {
 .sidebar-menu .treeview-menu > li > a > .fa-angle-down {
   width: auto;
 }
+.main-sidebar.full-details {
+  width: 0px;
+}
 /*
  * Component: Sidebar Mini
  */
@@ -690,6 +714,16 @@ a:focus {
   right: 10px;
   top: 50%;
   margin-top: -7px;
+}
+.sidebar-mini.sidebar-collapse .content-wrapper,
+.full-details {
+  margin-left: 0px !important;
+}
+.sidebar-mini.sidebar-collapse .main-sidebar.full-details {
+  width: 0px !important;
+}
+.sidebar-mini.sidebar-collapse .main-footer.full-details {
+  margin-left: 0px !important;
 }
 /*
  * Component: Control sidebar. By default, this is the right sidebar.
